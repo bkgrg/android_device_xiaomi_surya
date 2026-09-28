@@ -256,9 +256,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-# MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-surya/device.mk)
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -287,7 +284,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-shinkai
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
