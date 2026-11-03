@@ -149,10 +149,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi
@@ -289,8 +285,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
@@ -324,10 +319,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/permissions/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
-
-# QTI fwk-detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -367,20 +358,20 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # System properties
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sku/build_karna.prop:$(TARGET_COPY_OUT_ODM)/etc/build_karna.prop \
-    $(LOCAL_PATH)/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT.prop \
-    $(LOCAL_PATH)/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT_PA.prop \
-    $(LOCAL_PATH)/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT_PA_DUPLEX.prop \
-    $(LOCAL_PATH)/sku/build_surya-THAI.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-THAI.prop \
-    $(LOCAL_PATH)/sku/build_surya-THAI_PA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-THAI_PA.prop
+    $(LOCAL_PATH)/properties/sku/build_karna.prop:$(TARGET_COPY_OUT_ODM)/etc/build_karna.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT_PA.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-INT_PA_DUPLEX.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-THAI.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-THAI.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-THAI_PA.prop:$(TARGET_COPY_OUT_ODM)/etc/build_surya-THAI_PA.prop
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sku/build_karna.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_karna.prop \
-    $(LOCAL_PATH)/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT.prop \
-    $(LOCAL_PATH)/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT_PA.prop \
-    $(LOCAL_PATH)/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT_PA_DUPLEX.prop \
-    $(LOCAL_PATH)/sku/build_surya-THAI.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-THAI.prop \
-    $(LOCAL_PATH)/sku/build_surya-THAI_PA.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-THAI_PA.prop
+    $(LOCAL_PATH)/properties/sku/build_karna.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_karna.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT_PA.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-INT.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-INT_PA_DUPLEX.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-THAI.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-THAI.prop \
+    $(LOCAL_PATH)/properties/sku/build_surya-THAI_PA.prop:$(TARGET_COPY_OUT_RECOVERY)/root/build_surya-THAI_PA.prop
 
 # Telephony
 PRODUCT_PACKAGES += \
